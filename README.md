@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend mentor solution link](https://your-solution-url.com)
-- Live Site URL: [Deployed project link](https://your-live-site-url.com)
+- Solution URL: [Frontend mentor solution link](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-made-with-html-css-and-javascript-vntTt4IK1R)
+- Live Site URL: [Deployed project link](https://sunnyside-company.netlify.app/)
 
 ### Built with
 
