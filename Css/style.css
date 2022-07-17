@@ -317,6 +317,7 @@ ul {
   font-size: var(--fs-200);
   color: var(--clr-dark-grayish-blue);
   margin-bottom: 1.5rem;
+  font-weight: var(--fw-semi-bold);
 }
 
 .about__btn {
