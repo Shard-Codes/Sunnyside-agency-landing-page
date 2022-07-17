@@ -413,7 +413,7 @@ ul {
 }
 
 .testimonial__heading {
-  font-size: var(--fs-200);
+  font-size: var(--fs-300);
   color: var(--clr-dark-grayish-blue);
   font-family: var(--ff-second);
   font-weight: 700;
