@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+  <!--==================== Css file link ====================-->
+  <link rel="stylesheet" href="Css/style.css">
+
+    <!--==================== Font awesome cdn link ====================-->
+    <script src="https://kit.fontawesome.com/7e04ec30e9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <!--==================== Header ====================-->
+  <header class="header">
+    <nav class="navigation container">
+      <a href="#" class="nav__logo"><img src="images/logo.svg" alt="Sunnyside logo" class="nav__logo-img"></a>
+
+      <div class="nav__menu">
+        <ul class="nav__list" aria-label="Primary navigation">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link nav__btn">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav__toggle">
+        <i class="fa-solid fa-bars nav__toggle-icon"></i>
+      </div>
+    </nav>
+
+         <!--==================== Hero section ====================-->
+         <section class="hero">
+          <div class="hero__container container flex">
+            <h1 class="hero__title">
+              We are creatives
+            </h1>
+  
+            <img src="images/icon-arrow-down.svg" alt="A white down arrow" class="hero__arrow">
+          </div>
+        </section>
+  </header>
+
+    <!--==================== Main ====================-->
+    <main class="main">
+
+       <!--==================== About section ====================-->
+       <section class="about" id="about">
+        <div class="about__container grid">
+          <img src="images/desktop/image-transform.jpg" alt="A picture of an egg" class="about__img">
+          
+          <div class="text__box" style="--clr: hsl(51, 100%, 49%);">
+            <h2 class="about__title">
+              Transform your brand
+            </h2>
+            <p class="about__description">
+              We are a full-service creative agency specializing in helping brands grow fast. 
+              Engage your clients through compelling visuals that do most of the marketing for you.
+            </p>
+            
+            <button class="about__btn">Learn more</button>
+          </div>
+
+          
+          <img src="images/desktop/image-stand-out.jpg" alt="A standout image" class="about__img">
+          <div class="text__box" style="--clr: hsl(7, 99%, 70%);">
+            <h2 class="about__title">
+              Stand out to the right audience
+            </h2>
+            <p class="about__description">
+              Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+            </p>
+            
+            <button class="about__btn">Learn more</button>
+          </div>
+        </div>
+       </section>
+
+       <!--==================== Services section ====================-->
+       <section class="services" id="services">
+        <div class="services__container grid">
+          <div class="service__box">
+            <img src="images/desktop/image-graphic-design.jpg" alt="Picture of a cherry" class="service__image">
+            <div class="service__text-box">
+              <h2 class="service__title">
+                Graphic design
+              </h2>
+              <p class="service__description">
+                Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+              </p>
+            </div>
+          </div>
+
+          <div class="service__box">
+            <img src="images/desktop/image-photography.jpg" alt="Picture of an orange" class="service__image">
+            <div class="service__text-box">
+              <h2 class="service__title">
+                Photography
+              </h2>
+              <p class="service__description">
+                Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+              </p>
+            </div>
+          </div>
+
+        </div>
+       </section>
+
+       <!--==================== Testimonial section ====================-->
+       <section class="testimonial section">
+        <div class="testimonial__container container grid">
+          <h2 class="testimonial__heading">Client testimonials</h2>
+
+          <div class="testimonial__box">
+            <img src="images/image-emily.jpg" alt="A client's picture" class="testimonial__image">
+
+            <p class="testimonial__description">
+              We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+            </p>
+
+            <span class="testimonial__name">Emily R.</span>
+            <p class="testimonial__profession">Marketing Director</p>
+          </div>
+
+          <div class="testimonial__box">
+            <img src="images/image-thomas.jpg" alt="A client's picture" class="testimonial__image">
+
+            <p class="testimonial__description">
+              Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+            </p>
+
+            <span class="testimonial__name">Thomas S.</span>
+            <p class="testimonial__profession">Chief Operating Officer</p>
+          </div>
+
+          <div class="testimonial__box">
+            <img src="images/image-jennie.jpg" alt="A client's picture" class="testimonial__image">
+
+            <p class="testimonial__description">
+              Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+            </p>
+
+            <span class="testimonial__name">Jennie F.</span>
+            <p class="testimonial__profession">Business Owner</p>
+          </div>
+        </div>
+       </section>
+
+       <!--==================== Projects section ====================-->
+       <section class="projects" id="projects">
+        <div class="projects__container grid">
+          <img src="images/desktop/image-gallery-milkbottles.jpg" alt="Image of milk bottles" class="project__image">
+          <img src="images/desktop/image-gallery-orange.jpg" alt="Image of an orange" class="project__image">
+          <img src="images/desktop/image-gallery-cone.jpg" alt="Image of an ice cream cone" class="project__image">
+          <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="Image of sugar cubes" class="project__image">
+        </div>
+       </section>
+
+    </main>
+
+     <!--==================== Footer section ====================-->
+     <footer class="footer">
+      <div class="footer__container container grid">
+        <img src="images/logo.svg" class="footer__logo" alt="Sunnyside logo">
+
+        <ul class="footer__links" aria-label="Footer primary navigation">
+          <li class="footer__item">
+            <a href="#" class="footer__link">About</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Services</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Projects</a>
+          </li>
+        </ul>
+
+        <ul class="footer__social-links" aria-label="Footer social links">
+          <li class="footer__item">
+            <a href="#" class="footer__link"><i class="fa-brands fa-facebook-square footer_social-icon"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"><i class="fa-brands fa-instagram footer_social-icon"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"><i class="fa-brands fa-twitter footer_social-icon"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link"><i class="fa-brands fa-pinterest footer_social-icon"></i></a>
+          </li>
+        </ul>
+      </div>
+     </footer>
+
+    
+
+    <!--==================== Js file link ====================-->
+    <script src="Js/main.js"></script>
+ 
+</body>
+</html>

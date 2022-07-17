@@ -1,0 +1,624 @@
+/*====================== Google fonts link - Barlow ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+
+/*====================== Google fonts link - Fraunces ======================*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+/*====================== Css variables ======================*/
+:root {
+  --header-height: 4rem;
+
+  /*======== Colors ======== */
+
+  /* Primary */
+  --clr-soft-red: hsl(7, 99%, 70%);
+  --clr-yellow: hsl(51, 100%, 49%);
+  --clr-dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --clr-dark-blue: hsl(198, 62%, 26%);
+  --clr-dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral */
+  --clr-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --clr-very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --clr-dark-grayish-blue: hsl(232, 10%, 55%);
+  --clr-grayish-blue: hsl(210, 4%, 67%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /*======== typography ======== */
+
+  /* Fonts */
+  --ff-first: 'Barlow', sans-serif;
+  --ff-second: 'Fraunces', serif;
+
+  /* Font weights */
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+
+  /* Font sizes */
+  --fs-600: 2.75rem;
+  --fs-500: 2rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.25rem;
+  --fs-200: 1rem;
+  --fs-100: .913rem;
+}
+
+/* Responsive typography */
+@media (min-width: 768px) {
+  :root {
+    /* Font sizes */
+    --fs-600: 3.25rem;
+    --fs-500: 2rem;
+    --fs-400: 1.75rem;
+    --fs-300: 1.5rem;
+    /* --fs-200: 1rem; */
+    --fs-100: 1rem;
+  }
+}
+
+/*====================== Html reset ======================*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*====================== Base styles ======================*/
+body {
+  color: var(--clr-very-dark-grayish-blue);
+  font-family: var(--ff-first);
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*====================== Reusable classes ======================*/
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+/*====================== Header ======================*/
+.header {
+  background-image: url(../images/mobile/image-header.jpg);
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+/*====================== Navigation ======================*/
+.navigation {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo-img {
+  height: 1.5rem;
+}
+
+/* 704px wide */
+@media (max-width: 44em) {
+  /*====================== Navigation ======================*/
+  .nav__menu {
+    position: absolute;
+    top: 140%;
+    left: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    background: var(--clr-white);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.075);
+    max-width: 300px;
+    width: 100%;
+    padding: 2.5rem 0;
+    transition: all .3s;
+    z-index: 1;
+    clip-path: polygon(0% 8%, 91% 8%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+.nav__link {
+  font-size: var(--fs-100);
+  color: var(--clr-dark-grayish-blue);
+  font-weight: var(--fw-semi-bold);
+  text-decoration: none;
+}
+
+.nav__btn {
+  padding: .75rem 1.5rem;
+  background: var(--clr-yellow);
+  border-radius: 30px;
+  font-family: var(--ff-second);
+  color: var(--clr-very-dark-desaturated-blue);
+  transition: .3s;
+}
+
+.nav__btn:hover {
+  background: hsl(198, 93%, 71%);
+  color: var(--clr-white);
+}
+
+.nav__toggle-icon {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+}
+
+/* Open menu class */
+.nav__menu.open__menu {
+  left: 50%;
+  opacity: 1;
+}
+
+/*====================== Hero section ======================*/
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero__container {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.75rem;
+}
+
+.hero__title {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  font-family: var(--ff-second);
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/*====================== About section ======================*/
+.about__container {
+  grid-template-columns: 1fr;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.text__box {
+  padding: 3rem 2.25rem;
+  width: 100%;
+  text-align: center;
+}
+
+.about__title {
+  font-family: var(--ff-second);
+  font-size: var(--fs-500);
+  line-height: 1.1;
+  color: var(--clr-very-dark-desaturated-blue);
+  font-weight: var(--fw-black);
+  margin-bottom: 1.25rem;
+}
+
+.about__description {
+  line-height: 1.6;
+  font-size: var(--fs-200);
+  color: var(--clr-dark-grayish-blue);
+  margin-bottom: 1.5rem;
+  font-weight: var(--fw-semi-bold);
+}
+
+.about__btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--clr-very-dark-desaturated-blue);
+  font-weight: var(--fw-semi-bold);
+  font-size: var(--fs-200);
+  position: relative;
+  font-family: var(--ff-second);
+  font-weight: var(--fw-black);
+  cursor: pointer;
+}
+
+.about__btn::after {
+  position: absolute;
+  top: 75%;
+  height: 6px;
+  width: 100%;
+  border-radius: 40px;
+  content: '';
+  background: var(--clr);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  filter: blur(3px);
+  transition: all .3s;
+  opacity: .5;
+}
+
+.about__btn:hover::after {
+  filter: blur(1px);
+  opacity: .8;
+}
+
+/*====================== Services section ======================*/
+.services__container {
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 0;
+}
+
+.service__box {
+  position: relative;
+  overflow: hidden;
+}
+
+.service__box:nth-child(1) {
+  color: var(--clr-dark-desaturated-cyan);
+}
+
+.service__box:nth-child(2) {
+  color: var(--clr-dark-blue);
+}
+
+.service__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.service__text-box {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 2rem;
+}
+
+.service__title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-black);
+  font-family: var(--ff-second);
+  margin-bottom: .75rem;
+}
+
+.service__description {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-semi-bold);
+  line-height: 1.6;
+}
+
+/*====================== Testimonial section ======================*/
+.testimonial__container {
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  text-align: center;
+}
+
+.testimonial__heading {
+  font-size: var(--fs-300);
+  color: var(--clr-dark-grayish-blue);
+  font-family: var(--ff-second);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.testimonial__box {
+  display: grid;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.testimonial__image {
+  justify-self: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 1.75rem;
+}
+
+.testimonial__description {
+  font-size: var(--fs-200);
+  line-height: 1.6;
+  color: var(--clr-dark-grayish-blue);
+  margin-bottom: .75rem;
+  font-weight: var(--fw-bold);
+}
+
+.testimonial__name {
+  font-size: var(--fs-300);
+  font-family: var(--ff-second);
+  font-weight: 700;
+  color: var(--clr-very-dark-desaturated-blue);
+  display: block;
+  margin-bottom: .5rem;
+}
+
+.testimonial__profession {
+  color: var(--clr-dark-grayish-blue);
+  font-size: var(--fs-100);
+}
+
+/*====================== Projects section ======================*/
+.projects__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  padding: 4.5rem 0 0;
+}
+
+.project__image {
+  width: 100%;
+}
+
+/*====================== Footer section ======================*/
+.footer {
+  background: hsl(168, 34%, 61%);
+  padding: 2rem 2rem 3rem;
+  text-align: center;
+}
+
+.footer__logo {
+  justify-self: center;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.footer__link {
+  color: var(--clr-dark-desaturated-cyan);
+  font-weight: 600;
+  font-size: var(--fs-200);
+  transition: .3s;
+}
+
+.footer__link:hover {
+  color: var(--clr-white);
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.footer_social-icon {
+  font-size: var(--fs-300);
+}
+
+/*====================== Media queries ======================*/
+/* 496px wide */
+@media (min-width: 31em) {
+  /*====================== Header ======================*/
+  .header {
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+
+  /*====================== Services section ======================*/
+  .service__text-box {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*====================== Testimonials section ======================*/
+  .testimonial__box {
+    padding: 0 2rem;
+  }
+
+  /*====================== Projects section ======================*/
+  .projects__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 704px wide */
+@media (min-width: 44em) {
+  /*====================== Navigation ======================*/
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    color: var(--clr-white);
+  }
+
+  .nav__btn {
+    color: var(--clr-dark-blue);
+    background: var(--clr-white);
+  }
+
+  /*====================== About section ======================*/
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .about__container .about__img:nth-child(1){
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .about__container .about__img:nth-child(3){
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .text__box {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /*====================== Services section ======================*/
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*====================== Testimonials section ======================*/
+  .testimonial__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonial__heading {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .testimonial__box {
+    padding: 0;
+  }
+}
+
+/* 992px wide */
+@media (min-width: 62em) {
+  /*====================== About section ======================*/
+  .text__box {
+    width: 80%;
+  }
+
+  /*====================== Services section ======================*/
+  .service__text-box {
+    width: 80%;
+  }
+}
